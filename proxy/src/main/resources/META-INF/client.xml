@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config mode="client" enabled="true">
+    <!-- 配置Domain ID-->
+    <domain id="titan-gateway" enabled="true" max-message-size="1000"/>
+    <servers>
+        <server ip="10.10.184.23" port="2280" http-port="8080"></server>
+    </servers>
+</config>

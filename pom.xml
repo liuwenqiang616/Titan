@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.5.RELEASE</version>
+    </parent>
+
+    <groupId>com.wanfangdata.zuul</groupId>
+    <artifactId>Titan</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>proxy</module>
+        <module>api</module>
+    </modules>
+    <properties>
+        <archaius.version>0.5.11</archaius.version>
+        <netflix-commons.version>0.1.1</netflix-commons.version>
+        <servo.version>0.4.44</servo.version>
+        <cat.version>3.0.0</cat.version>
+        <groovy.version>2.0.2</groovy.version>
+        <zookeepertools_version>1.2018.4</zookeepertools_version>
+        <curator.version>4.0.0</curator.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- netflix -->
+            <dependency>
+                <groupId>com.netflix.archaius</groupId>
+                <artifactId>archaius-core</artifactId>
+                <version>${archaius.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.netflix.netflix-commons</groupId>
+                <artifactId>netflix-commons-util</artifactId>
+                <version>${netflix-commons.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.netflix.servo</groupId>
+                <artifactId>servo-core</artifactId>
+                <version>${servo.version}</version>
+            </dependency>
+
+            <!--大众点评  cat -->
+            <dependency>
+                <groupId>com.dianping.cat</groupId>
+                <artifactId>cat-client</artifactId>
+                <version>${cat.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy-all</artifactId>
+                <version>${groovy.version}</version>
+            </dependency>
+
+            <!--Zookeeper-->
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-recipes</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-client</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wanfangdata</groupId>
+                <artifactId>zookeepertools</artifactId>
+                <version>${zookeepertools_version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>
